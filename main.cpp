@@ -84,3 +84,20 @@ constexpr remove_ref_t<T>&& move(T&& value) noexcept
 {
     return static_cast<remove_ref_t<T>&&>(value);
 }
+
+// тут я применил forward
+template<class T1, class T2>
+struct Pair
+{
+    T1 first;
+    T2 second;
+    Pair() : first(), second() {}
+
+    template<class U1, class U2>
+    Pair(U1&& obj1, U2&& obj2) : first(forward<U1>(obj1)), second(forward<U2>(obj2)) {}
+
+    Pair(const Pair& obj) = default;
+    Pair(Pair&& obj) = default;
+    Pair& operator=(const Pair& obj) = default;
+    Pair& operator=(Pair&& obj) = default;
+};
