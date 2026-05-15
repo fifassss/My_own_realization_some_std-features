@@ -1,3 +1,5 @@
+# Ru:
+
 # Этот репозиторий содержит некоторую реализацию функционала стандартной библиотеки.
 
 ## forward
@@ -8,3 +10,21 @@
 
 ## Pair
 собственный объект который хранит пару.Его конструктор использует 'универсальные' ссылки и forward для идеальной передачи
+
+
+# Eng:
+
+
+# This repository contain some realization functional standart library.
+
+## Forward 
+
+Own two overloads function forward for get knowledge mehanicsm perfect forward and collapsing reference.And taken into account all verify like STL,like constexpr or static_assert.And own Type_traits
+
+## move
+
+Own function move.Using all what and usually std::move.Move dont move resource.Move make resource movable
+
+## Pair
+
+Own object,which store pair object.Pair constructor use 'universal' reference and forward for perfect forward
